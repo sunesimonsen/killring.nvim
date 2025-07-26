@@ -57,7 +57,12 @@ function KillRing:show_picker()
   end)
 end
 
-function KillRing.setup()
+function KillRing.setup(opts)
+  opts = opts or {}
+  if opts.max_size and type(opts.max_size) == "number" then
+    KillRing.max_size = opts.max_size
+  end
+
   vim.api.nvim_create_autocmd("TextYankPost", {
     pattern = "*",
     callback = function()
