@@ -2,6 +2,8 @@
 
 Paste previously yanked or deleted content from a Telescope picker.
 
+https://github.com/user-attachments/assets/2f9f25c7-e271-48db-95d7-04d64b27b7d4
+
 ## Installation
 
 Install with [lazy.nvim](https://github.com/folke/lazy.nvim) with a kill ring of
