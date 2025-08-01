@@ -13,7 +13,7 @@ return {
     max_size: 30 -- the size of the kill ring (defaults to 20)
   },
   keys = {
-    { '<leader>yy', ':KillRing<CR>', desc = 'Paste from killring', mode = { 'n' } },
+    { '<leader>yy', ':KillRing<CR>', desc = 'View yank history', mode = { 'n' } },
   },
   lazy = false,
 }
