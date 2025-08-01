@@ -8,16 +8,14 @@ https://github.com/user-attachments/assets/2f9f25c7-e271-48db-95d7-04d64b27b7d4
 
 ```lua
 return {
-  {
-    'sunesimonsen/killring.nvim',
-    config = function()
-      local killring = require 'killring'
-      killring.setup({
-        max_size: 30 -- the size of the kill ring (defaults to 20)
-      })
-      vim.keymap.set('n', '<leader>yy', ':KillRing<cr>', { desc = 'Paste from killring' })
-    end,
+  'sunesimonsen/killring.nvim',
+  opts = {
+    max_size: 30 -- the size of the kill ring (defaults to 20)
   },
+  keys = {
+    { '<leader>yy', ':KillRing<CR>', desc = 'Paste from killring', mode = { 'n' } },
+  },
+  lazy = false,
 }
 ```
 
