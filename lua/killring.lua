@@ -88,7 +88,7 @@ function KillRing.setup(opts)
 
   vim.api.nvim_create_user_command("KillRing", function()
     KillRing:show_picker()
-  end, {})
+  end, { desc = "View yank history" })
 end
 
 return KillRing
